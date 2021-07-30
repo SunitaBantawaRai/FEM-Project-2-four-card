@@ -1,0 +1,168 @@
+/* 
+======
+Global Variables
+======
+ */
+:root {
+  /* Primary color */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral color */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  --Border-Radius: 0.5rem;
+
+  --Box-Shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
+  --Font-Family: "Poppins", sans-serif;
+  --Font-Weight-1: 600;
+  --Font-Weight-2: 400;
+  --Font-Weight-3: 200;
+}
+h1 {
+  font-size: 1.6rem;
+}
+
+/* 
+======
+Main
+======
+ */
+body {
+  background: var(--Very-Light-Gray);
+}
+.four-cards {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.title-faint {
+  color: var(--Very-Dark-Blue);
+  font-weight: var(--Font-Weight-3);
+  font-family: var(--Font-Family);
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+.title-bold {
+  color: var(--Very-Dark-Blue);
+  font-weight: var(--Font-Weight-1);
+  font-family: var(--Font-Family);
+  font-size: 1.5rem;
+}
+.title-info {
+  font-family: var(--Font-Family);
+  color: var(--Grayish-Blue);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.four-cards-container {
+  padding-top: 2.5rem;
+}
+.card-container-1 {
+  border-top: 0.25rem solid var(--Cyan);
+}
+.card-container-2 {
+  border-top: 0.25rem solid var(--Red);
+}
+.card-container-3 {
+  border-top: 0.25rem solid var(--Orange);
+}
+.card-container-4 {
+  border-top: 0.25rem solid var(--Blue);
+}
+.card-container-1,
+.card-container-2,
+.card-container-3,
+.card-container-4 {
+  max-width: 63rem;
+  height: auto;
+  background: var(--White);
+  border-radius: var(--Border-Radius);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: var(--Box-Shadow);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+.card-title {
+  font-family: var(--Font-Family);
+  color: var(--Very-Dark-Blue);
+  font-size: 1.3rem;
+  text-align: start;
+  padding-left: 2rem;
+  line-height: 0;
+  padding-top: 1.2rem;
+}
+.card-info {
+  font-family: var(--Font-Family);
+  color: var(--Grayish-Blue);
+  font-size: 0.8rem;
+  text-align: start;
+  padding-left: 2rem;
+  line-height: 1.5rem;
+}
+.card-symbol {
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  text-align: end;
+}
+@media screen and (min-width: 768px) {
+  .title-info {
+    width: 30rem;
+    margin: 0 auto;
+  }
+  .four-cards-container {
+    display: grid;
+    column-gap: 2rem;
+    grid-template: ". card-container-2 ." "card-container-1 card-container-2 card-container-4" "card-container-1 card-container-3 card-container-4" ". card-container-3 .";
+    min-height: 100vh;
+  }
+  .card-container-1 {
+    grid-area: card-container-1;
+  }
+  .card-container-2 {
+    grid-area: card-container-2;
+  }
+  .card-container-3 {
+    grid-area: card-container-3;
+  }
+  .card-container-4 {
+    grid-area: card-container-4;
+  }
+
+  .card-container-1,
+  .card-container-2,
+  .card-container-3,
+  .card-container-4 {
+    padding-right: 1.5rem;
+  }
+  .card-symbol {
+    padding-right: 0;
+  }
+}
+
+/* 
+======
+Footer
+======
+ */
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--Grayish-Blue);
+  padding-bottom: 1rem;
+}
+.attribution a {
+  color: var(--Very-Dark-Blue);
+}
