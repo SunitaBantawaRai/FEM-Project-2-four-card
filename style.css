@@ -43,16 +43,15 @@ body {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.title-faint,
-.title-bold {
+.title {
   font-size: 1.5rem;
   color: var(--Very-Dark-Blue);
 }
-.title-faint {
+.faint {
   font-weight: var(--Font-Weight-3);
   line-height: 1rem;
 }
-.title-bold {
+.bold {
   font-weight: var(--Font-Weight-1);
   font-size: 1.5rem;
 }
@@ -91,6 +90,7 @@ body {
   box-shadow: var(--Box-Shadow);
   padding-top: 1rem;
   padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .card-title {
   font-family: var(--Font-Family);
@@ -112,7 +112,10 @@ body {
   padding-right: 2rem;
   text-align: end;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 1.8rem;
+  }
   .title-info {
     max-width: 30rem;
     height: auto;
@@ -147,6 +150,7 @@ body {
     padding-right: 2rem;
     width: 23rem;
     height: 16rem;
+    margin-bottom: 0;
   }
   .card-symbol {
     padding-right: 0;
